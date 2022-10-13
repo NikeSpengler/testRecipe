@@ -25,7 +25,7 @@ function App() {
           <Route path="/fridge">
             <Fridge />
           </Route>
-          <Route path="/recipe:id">
+          <Route path="/recipes:id">
             <Recipe />
           </Route>
           <Route path="/groceryList:id">
