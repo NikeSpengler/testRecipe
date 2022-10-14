@@ -19,13 +19,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Navbar />
-            <Route exact path="/" element={<Home/>}/>
-            <Route path="/fridge" element={<Fridge/>}/> 
-            <Route path="/recipes:id" element={<Recipe/>}/>
-            <Route path="/groceryList:id" element={<GroceryList/>}/>
-            <Route path="/user" element={<User/>}/>
-            <Route path="/create" element={<Create/>}/>
-            <Route path="/search" element={<Search/>}/>
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/fridge" element={<Fridge/>}/> 
+          <Route path="/recipes:id" element={<Recipe/>}/>
+          <Route path="/groceryList:id" element={<GroceryList/>}/>
+          <Route path="/user" element={<User/>}/>
+          <Route path="/create" element={<Create/>}/>
+          <Route path="/search" element={<Search/>}/>
         </Routes>
       </BrowserRouter>
     </div>
