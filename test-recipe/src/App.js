@@ -1,7 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
-// styles
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // page components
 import Navbar from "./components/Navbar";
@@ -13,37 +10,26 @@ import Search from "./pages/search/Search";
 import GroceryList from "./pages/groceryList/GroceryList";
 import User from "./pages/user/User";
 
+// styles
+import './App.css';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-        <Switch exact path="/">
-          <Route>
-            <Home />
-          </Route>
-          <Route path="/fridge">
-            <Fridge />
-          </Route>
-          <Route path="/recipes:id">
-            <Recipe />
-          </Route>
-          <Route path="/groceryList:id">
-            <GroceryList/>
-          </Route>
-          <Route path="/user">
-            <User />
-          </Route>
-          <Route path="/create">
-            <Create />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-        </Switch>
+        <Routes>
+          <Navbar />
+            <Route exact path="/" element={<Home/>}/>
+            <Route path="/fridge" element={<Fridge/>}/> 
+            <Route path="/recipes:id" element={<Recipe/>}/>
+            <Route path="/groceryList:id" element={<GroceryList/>}/>
+            <Route path="/user" element={<User/>}/>
+            <Route path="/create" element={<Create/>}/>
+            <Route path="/search" element={<Search/>}/>
+        </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App
