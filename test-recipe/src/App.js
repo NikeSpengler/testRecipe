@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // page components
 import Navbar from "./components/Navbar";
-import Home from "./pages/home/Home";
+import HomeRecipe from "./pages/homeRecipe/HomeRecipe";
 import Create from "./pages/create/Create";
 import Fridge from "./pages/fridge/Fridge";
 import Recipe from "./pages/recipe/Recipe";
@@ -17,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Routes>
-          <Navbar />
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/homeRecipe" element={<HomeRecipe/>}/>
           <Route path="/fridge" element={<Fridge/>}/> 
           <Route path="/recipes:id" element={<Recipe/>}/>
           <Route path="/groceryList:id" element={<GroceryList/>}/>

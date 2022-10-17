@@ -2,12 +2,12 @@ import { useFetch } from "../../hooks/useFetch";
 import React from 'react'
 
 //styles
-import "./home.css"
+import "./homeRecipe.css"
 
 // components
 import RecipeList from "../../components/RecipeList";
 
-export default function Home() {
+export default function HomeRecipe() {
   const { data, isPending, error } = useFetch("http://localhost:3000/recipes")
 
   return (
